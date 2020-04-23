@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../vendors/normalise.css">
+    <link rel="stylesheet" type="text/css" href="../vendors/Grid.css">
+    <link rel="stylesheet" type="text/css" href="../vendors/ionicons-5.0.0.designerpack/">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/queries.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css">
+    <title> Surf &mdash; Bombora</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="../images/websiteGif_1_2.gif" class="logo"></a>
+            <div class="row">
+
+                <ul class="main-nav">
+
+                    <li style="margin-left: 0;"><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="rent.html">Rentals</a></li>
+                    <li><a href="lesson.html">Lessons</a></li>
+                    <li><a href="contact.html">About</a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="wave-text-box">
+
+            <h1>Register</h1>
+
+
+        </div>
+    </header>
+    <section class="login">
+       <div class="row">
+           <h2>Register/Login</h2>
+       </div>
+        <div class="logform">
+            <!-- Button to open the modal login form -->
+
+
+            <!-- The Modal -->
+            <div id="id01" class="modal">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                <!-- Modal Content -->
+                <form class="modal-content animate" action="../php/login.php" method="post">
+                    <div class="imgcontainer">
+                        <img style="height: 25%;width: 25%; margin: 0 37.55%; overflow: hidden;" src="../images/logoVersions/logonew.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="container">
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="username" required>
+
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
+
+                        <button type="submit" value="submit">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <form action="../php/Registration.php" method="post">
+            <div class="container">
+                <p>Please fill in this form to create an account or <button id="log" onclick="document.getElementById('id01').style.display='block'">Login</button>.</p>
+                <hr>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter a Username" name="username" required>
+
+                <label for="email"><b>Email</b></label>
+                <input style="background-color: rgba(114, 232, 241, 0.17);" type="email" placeholder="Enter Email" name="email" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+ 
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <hr>
+
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                <button type="submit" class="registerbtn" value="submit">Register</button>
+            </div>
+
+            <div class="container signin">
+                <p>Already have an account? <button id="log1" onclick="document.getElementById('id01').style.display='block'">Login</button></p>
+            </div>
+        </form>
+    </section>
+
+    <section class="footer">
+
+        <div class="row">
+
+            <div class="col span-1-of-4 box">
+                <a href="shop.html"> <i class="ion-bag icon-big"></i></a>
+                <h3>Shop</h3>
+            </div>
+            <div class="col span-1-of-4 box">
+                <a href="book.html"> <i class="ion-android-calendar icon-big"></i></a>
+                <h3>Bookings</h3>
+            </div>
+            <div class="col span-1-of-4 box">
+                <a href="contact.html#con"><i class="ion-ios-telephone icon-big"></i></a>
+                <h3>Contact</h3>
+            </div>
+            <div class="col span-1-of-4 box">
+                <a href="contact.html#loc"> <i class="ion-location icon-big"></i> </a>
+                <h3>Location</h3>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+
+        <div class="row">
+            <a href="index.html"><img style="height: 100px; float: right;" src="../images/logoVersions/newlogoWhite.png"></a>
+            <a href="index.html"><img style="height: 100px; float: left;" src="../images/logoVersions/newlogoWhite.png"></a>
+            <p style="text-align: center;">
+                <br>Copyright &copy; 2020 by Brian Morrison.<br> All rights reserved.
+
+            </p>
+            <div class="col span-1-of-2">
+                <ul class="social-links">
+
+                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <script src="../js/site.js"></script>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</body>
+
+</html>
