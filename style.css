@@ -7,13 +7,15 @@
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
     background-color: #fff;
     color: #000;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 .clearfix {
@@ -121,7 +123,7 @@ h2:after {
 .icon-big {
     font-size: 400%;
     display: block;
-    color: rgba(81, 214, 225, 0.63);
+    color: rgb(0, 0, 0);
     margin-bottom: 10%;
     text-align: center;
 }
@@ -130,21 +132,24 @@ h2:after {
 /*-------------------Buttons---------------------------*/
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     color: #fff;
     display: inline-block;
     padding: 10px 30px;
-    font-weight: 300;
+    font-weight: 600;
     text-decoration: none;
     border-radius: 200px;
     transition: background-color 0.5s, border 0.5s, color 0.5s;
 }
 
 .btn-full:link,
-.btn-full:visited {
-    background-color: rgba(114, 232, 241, 0.4);
+.btn-full:visited,
+input[type=submit] {
+    background-color: rgba(114, 232, 241, 0.85);
     border: 2px solid rgb(230, 234, 234);
     margin-right: 15px;
+
 }
 
 .btn-ghost:link,
@@ -155,8 +160,10 @@ h2:after {
 }
 
 .btn:hover,
-.btn:active {
-    background-color: rgba(81, 214, 225, 0.63);
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #0027ff;
     transition: font-size 0.1s;
     font-weight: 300;
 }
@@ -172,7 +179,7 @@ h2:after {
 .btn ghost:active {
     border: 2px solid rgba(81, 214, 225, 0.63);
     color: #fff;
-    background-color: rgba(81, 214, 225, 0.63);
+    background-color: rgba(0, 39, 255, 0.72);
     font-size: 115%;
 }
 
@@ -193,15 +200,17 @@ h2:after {
 
 .btn.btn-full.rent:hover,
 .btn.btn-full.rent:active {
-    background-color: rgb(32, 77, 83);
+    background-color: #0027ff;
+    ;
     font-size: 125%;
     font-weight: 400;
     color: blue;
 
 }
+
 .btn.btn-ghost.lesson:hover,
 .btn.btn-ghost.lesson:active {
-    background-color: rgb(32, 77, 83);
+    background-color: #0027ff;
     font-size: 125%;
     font-weight: 400;
     color: blue;
@@ -223,10 +232,10 @@ header {
 
 .wave-text-box {
     position: absolute;
-    width: 1140px;
+    width: 100%;
     top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-left: 10%;
+
 
 }
 
@@ -236,9 +245,48 @@ header {
     width: auto;
     float: left;
     opacity: 0.5;
-    
 
 
+
+}
+
+/* ----------------------------------------------------------*/
+/*------------------- footer ---------------------------*/
+/*-----------------------------------------------------------*/
+
+.footer {
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.72), rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.87)), url(../images/action-action-photography-beach-blur-1324350.jpg);
+    color: rgb(0, 0, 0);
+    margin-top: 40px;
+    height: 90vh;
+    background-size: cover;
+    margin-bottom: 0px;
+
+
+}
+
+footer {
+    background-color: rgb(13, 119, 128);
+    color: #fff;
+
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+    display: inline-block;
+
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 25px
+}
+
+ul.social-links i:active,
+ul.social-links i:hover {
+    color: #0027ff;
 }
 
 /* ------------- Nav bar ----------------------*/
@@ -270,7 +318,7 @@ main-nav {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid rgba(81, 214, 225, 0.63);
+    border-bottom: 2px solid #51d6e1;
     font-weight: 400;
     font-size: 115%;
 }
@@ -282,8 +330,9 @@ main-nav {
 
 .shop-grid-showcase {
     list-style: none;
-    width: 75%;
-    margin: 0px 25% 0px 25%;
+    width: 60%;
+    margin: 0px 20% 0px 20%;
+    background-color: rgba(244, 244, 244, 0.37);
 
 }
 
@@ -348,9 +397,9 @@ main-nav {
 /*-------------------Customers Testimonials---------------------------*/
 /*-----------------------------------------------------------*/
 .section-testimonials {
-    background-image: linear-gradient(#ccc8c8, rgba(81, 214, 225, 0) ), url(../images/walkin.jpg);
+    background-image: linear-gradient(#ccc8c8, rgba(81, 214, 225, 0)), url(../images/walkin.jpg);
     background-size: cover;
-    color: #fff;  
+    color: #fff;
     background-attachment: fixed;
 }
 
@@ -361,19 +410,22 @@ blockquote {
     line-height: 145%;
     position: relative;
     margin-top: 45px;
-   
+
 }
+
 blockquote:before {
     content: "\201C";
     font-size: 300%;
     position: absolute;
     top: 8px;
     left: -15px;
-    
+
 }
+
 .section-testimonials-col {
     width: 30%;
 }
+
 cite {
     font-size: 90%;
     margin-top: 25px;
@@ -386,10 +438,437 @@ cite img {
     margin-right: 10px;
     vertical-align: middle;
 }
-cite img, i {
+
+cite img,
+i {
+    color: #fff;
+}
+
+.ion-ios-star,
+.ion-ios-star-half {
     color: gold;
 }
 
 /* ----------------------------------------------------------*/
 /*-------------------rent-grid  ---------------------------*/
 /*-----------------------------------------------------------*/
+
+.easkey {
+    width: 80%;
+    margin: 0px 10% 0px 10%;
+    height: auto;
+    min-height: 400px
+}
+
+/*------------------section-size-guide-------------------------*/
+.size-guide {
+    list-style: none;
+    width: 60%;
+    margin: 0px 20% 0px 20%;
+
+}
+
+.size-guide li {
+    display: block;
+    float: left;
+    width: 50%;
+
+    height: ;
+
+}
+
+.grid-video {
+    width: 100%;
+    margin: 1px;
+    background-color: rgb(248, 246, 246);
+    color: #000;
+
+}
+
+.grid-photo img {
+    opacity: 0.9;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    overflow: hidden;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+/* ----------------------------------------------------------*/
+/*-------------------shop page ---------------------------*/
+/*-----------------------------------------------------------*/
+
+
+.wetsuits,
+.boards,
+.accessories {
+    background-color: : #fff;
+    margin-bottom: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: inline-block;
+    height: auto;
+}
+
+.price-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgba(114, 232, 241, 0.4);
+    text-align: center;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(114, 232, 241, 0.4);
+    margin-top: 40px;
+    float: left;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 5px rgba(114, 232, 241, 0.37);
+
+
+}
+
+div.col.span {
+    width: 30%;
+}
+
+.product-image {
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+}
+
+.price-box div h3 {
+    padding: 10px;
+    border-bottom: 1px solid rgba(114, 232, 241, 0.4);
+
+}
+
+.price {
+    font-size: 150%;
+    color: rgb(255, 147, 0);
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 1px solid rgba(114, 232, 241, 0.17);
+    padding: 10px;
+
+}
+
+.suit-discription {
+    font-style: italic;
+    padding: 10px;
+}
+
+/*-------------------Contact---------------------------*/
+
+.contact {
+    text-align: center;
+
+}
+
+.contact p {
+    line-height: 400%;
+    width: 70%;
+    font-weight: 300;
+    font-size: 130%;
+}
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 2px solid rgba(114, 232, 241, 0.17);
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+/*-------------------Lesson---------------------------*/
+.lesson-prices {
+    background-color: rgba(244, 244, 244, 0.37);
+    margin-bottom: 40px;
+    height: 100vh;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 22.5%;
+    margin-right: 5%;
+    margin-top: 50%;
+    box-shadow: 0 7px 7px rgba(114, 232, 241, 0.37);
+
+
+
+
+}
+
+.plan-box div:first-child {
+    background-color: rgba(244, 244, 244, 0.67);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0;
+
+}
+
+.plan-box div {
+    padding: 10px;
+    border-bottom: 1px solid rgba(114, 232, 241, 0.17);
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    color: rgb(255, 147, 0);
+    font-weight: 300;
+
+}
+
+.plan-include {
+    font-size: 80%;
+    font-weight: 100;
+}
+
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul il {
+    padding: 5px 0;
+}
+
+/*-------------------Rental---------------------------*/
+.rental-prices {
+    background-color: rgba(244, 244, 244, 0.37);
+}
+
+.rental-table {
+
+    width: 90%;
+    border-radius: 5px;
+    margin: 5%;
+    box-shadow: 0 7px 7px rgba(114, 232, 241, 0.37);
+    padding: 15px;
+    font-weight: 300;
+    height: 60vh
+}
+
+.rental-table tr:first-child {
+    font-size: 118%;
+    font-weight: 500;
+    background-color: #fff;
+    margin-bottom: 10px;
+
+}
+
+.rental-table tr {
+    font-size: 115%;
+    font-weight: 300;
+    margin-bottom: 10px;
+
+}
+
+.rental-table span {
+    font-size: 80%;
+    font-weight: 200;
+
+}
+
+.faq {
+    padding: 100px;
+}
+
+.faq h4 {
+    margin-bottom: 10px;
+}
+
+.faq p {
+    text-align: left;
+    margin-left: 0;
+
+
+}
+
+.faq h5 {
+    text-align: center;
+}
+
+/*-------------------Login---------------------------*/
+
+.login {
+    width: 60%;
+    height: 110vh;
+    margin: auto;
+
+}
+
+.logform {
+    display: inline;
+    margin: 100px;
+
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: rgba(114, 232, 241, 0.17);
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid rgba(114, 232, 241, 0.17);
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+    background-color: #0027ff;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+button#log,
+button#log1 {
+    color: #0027ff;
+    background-color: rgba(114, 232, 241, 0);
+    border: none;
+    border-bottom: 1px solid;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: rgba(114, 232, 241, 0.17);
+    text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto;
+    /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 40%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
